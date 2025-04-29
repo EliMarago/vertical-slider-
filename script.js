@@ -19,16 +19,15 @@ function changeSlide(direction) {
   const sliderHeight = sliderContainer.clientHeight;
   if (direction === "up") {
     activeSlide++;
-
     if (activeSlide > slidesLength - 1) {
       activeSlide = 0;
-    } else if (direction === "down") {
-      activeSlide--;
     }
+  } else if (direction === "down") {
+    activeSlide--;
     if (activeSlide < 0) {
       activeSlide = slidesLength - 1;
     }
   }
-  slideRight.style.transform = `translateY(-${activeSlide * 100}vh)`;
-  slideLeft.style.transform = `translateY(${activeSlide * 100}vh)`;
+  slideRight.style.transform = `translateY(-${activeSlide * sliderHeight}px)`;
+  slideLeft.style.transform = `translateY(${activeSlide * sliderHeight}px)`;
 }
