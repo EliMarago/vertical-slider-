@@ -21,6 +21,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  transition: transform 0.5s ease-in-out;
 }
 .left-slide > div {
   height: 100%;
@@ -42,12 +43,14 @@ body {
   top: 0;
   left: 35%;
   width: 65%;
+  transition: transform 0.5s ease-in-out;
 }
 .right-slide > div {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   height: 100%;
+  width: 100%;
 }
 button {
   background-color: #e2e2e2;
@@ -60,6 +63,9 @@ button {
 }
 button:hover {
   color: rgb(109, 109, 109);
+}
+button:focus {
+  outline: none;
 }
 .action-buttons button {
   transition: transform 0.1s ease, box-shadow 0.1s ease;
